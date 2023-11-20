@@ -1,0 +1,573 @@
+@font-face {
+  font-family: "futura";
+  src: url(./Futura-Bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  color: white;
+  background-color: black;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+.nav {
+  height: 125px;
+  width: 100%;
+  position: fixed;
+  z-index: 102;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  height: 82px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.nav-items {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  padding-top: 3%;
+  gap: 60px;
+}
+
+.links a {
+  text-decoration: none;
+  color: black;
+  font-family: "Helvetica";
+  text-transform: uppercase;
+  font-size: 13px;
+  transition: opacity 0.2s ease;
+}
+
+.links a:hover {
+  opacity: 60%;
+}
+
+.icons {
+  display: flex;
+  gap: 60px;
+  background-color: #f7f7f7;
+  padding: 8px 16px;
+  border-radius: 50px;
+}
+
+.icons i {
+  cursor: pointer;
+}
+
+.icons #menu {
+  transition: transform 0.3s ease;
+}
+
+.icons #menu:hover {
+  transform: scale(1.2);
+}
+
+.icons #cart {
+  transition: transform 0.3s ease;
+}
+
+.icons #cart:hover {
+  transform: rotate(-10deg);
+}
+
+.cursor {
+  height: 200px;
+  width: 200px;
+  background-color: blanchedalmond;
+  position: fixed;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.page1 {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  padding-top: 25vh;
+}
+
+.page1 h1 {
+  font-size: 16.5vw;
+  font-family: "futura";
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: -1rem;
+  line-height: 14vw;
+}
+
+.video-container {
+  height: 100vh;
+  width: 100%;
+  margin-top: 30px;
+  position: relative;
+  padding-inline: 1vw;
+}
+
+.video-container video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.video-container .play {
+  padding: 3vw 2.5vw;
+  background-color: black;
+  color: white;
+  font-size: 1vw;
+  position: fixed;
+  text-transform: uppercase;
+  font-family: "futura";
+  font-weight: 400;
+  border-radius: 50%;
+  opacity: 0;
+  scale: 0;
+}
+
+.separation {
+  display: flex;
+  flex-direction: column;
+  padding: 0vw 1.3vw;
+}
+
+.break {
+  padding-top: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.break p {
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+#line {
+  height: 1px;
+  width: 100%;
+  background-color: black;
+  margin-right: 1.3vw;
+}
+
+.page2 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw 1vw;
+}
+
+.page2 .elem {
+  height: 100%;
+  width: 32%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  scale: 1.1;
+}
+
+.elem .dets {
+  height: 50px;
+  width: 60%;
+  position: absolute;
+  background-color: #f5dfcf;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0px 20px;
+}
+
+.dets #dot {
+  height: 9px;
+  width: 9px;
+  background-color: black;
+  border-radius: 50px;
+}
+
+.dets p,
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.dets p {
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 70%;
+}
+
+.dets h6 {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.words {
+  height: 50vh;
+  width: 100%;
+  padding: 1vw 1.3vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-text h1 {
+  font-family: "futura";
+  font-size: 55px;
+  width: 50%;
+  line-height: 54px;
+}
+
+.right-text {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  padding-right: 80px;
+}
+
+.right-text p {
+  font-family: "helvetica";
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.right-text span {
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-family: "helvetica";
+  padding-bottom: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.page3 {
+  min-height: 120vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.child {
+  height: 90vh;
+  width: 45vw;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.child img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+#child1 {
+  display: flex;
+  flex-direction: column;
+}
+
+#child1 p {
+  padding-top: 60px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+
+#child1 span {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#child2 {
+  display: flex;
+  flex-direction: column;
+}
+
+#child2 p {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+
+#child2 span {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#child3 {
+  display: flex;
+  flex-direction: column;
+}
+
+#child3 p {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+
+#child3 span {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#child4 {
+  display: flex;
+  flex-direction: column;
+}
+
+#child4 p {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+
+#child4 span {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page4 {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.page4 h1 {
+  font-family: "futura";
+  font-size: 4.5vw;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 4.7vw;
+  padding-inline: 12%;
+}
+
+.page4 button {
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  margin-inline: 40%;
+  padding: 10px 15px;
+  border-radius: 50px;
+  height: 60px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-block: 80px;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.page4 button:hover {
+  color: rgb(111, 111, 111);
+}
+
+.page4 p {
+  font-size: 12px;
+  font-weight: 500;
+  color: black;
+  opacity: 70%;
+  padding-inline: 20%;
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 600px) {
+  .nav-items .links {
+    display: none;
+  }
+
+  .page1 {
+    min-height: 70vh;
+    padding-inline: 1.3vw;
+  }
+  .page1 h1 {
+    font-size: 15.5vw;
+    letter-spacing: -3px;
+    line-height: 14vw;
+  }
+
+  .video-container {
+    height: 25vh;
+  }
+  .video-container .play {
+    padding: 7vw 5.5vw;
+    font-size: 3vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-transform: uppercase;
+    opacity: 1;
+    scale: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  .page2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 3vw 2vw;
+  }
+
+  .page2 .elem {
+    height: 75vh;
+    width: 100%;
+    padding: 0 1.3vw;
+    overflow: hidden;
+    margin: 15px 0px;
+  }
+
+  .elem .dets {
+    height: 70px;
+    width: 80%;
+    position: absolute;
+    background-color: #f5dfcf;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 20px;
+  }
+
+  .words {
+    height: 100%;
+    padding: 1vw 1.3vw;
+    display: block;
+    width: 100%;
+  }
+
+  .left-text h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .right-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10%;
+  }
+
+  .right-text p {
+    font-family: "helvetica";
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .page3 {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: block;
+  }
+
+  .child {
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #child1 p,
+  #child2 p,
+  #child3 p,
+  #child4 p {
+    font-size: 22px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+
+  #child1 span,
+  #child2 span,
+  #child3 span,
+  #child4 span {
+    font-size: 20px;
+  }
+
+  .page4 {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page4 h1 {
+    font-family: "futura";
+    font-size: 40px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    padding: 3vw 1.3vw;
+  }
+
+  .page4 button {
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+    padding: 10px 15px;
+    border-radius: 50px;
+    height: 60px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-block: 80px;
+    border: none;
+    width: 60%;
+  }
+}
